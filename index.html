@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <script type="module">
+        import { provideFASTDesignSystem, fastButton } from "https://cdn.jsdelivr.net/npm/@microsoft/fast-components/dist/fast-components.min.js";
+        provideFASTDesignSystem().register(fastButton({"shadowOptions":null}));
+      </script>
+      <!--<script type="module" src="https://raw.githubusercontent.com/guidedflow/flowstudio-components/main/config.js"></script>-->
+      <!--<script type="module" src="https://raw.githubusercontent.com/guidedflow/flowstudio-components/main/title.js"></script>-->
+      <link rel="stylesheet" href="https://use.typekit.net/rep8ipy.css" /> 
+      <link rel="stylesheet" href="style.css" />
+   </head>
+   <body>
+      <div class="page">
+         <header>
+            <div class="left-header">
+               <img src="imgs/insure.co.svg" />
+            </div>
+            <div class="right-header">
+               <a href="#">Sign In</a>
+            </div>
+         </header>
+         <section>
+            <div class="flow-studio-container">
+               <div class="flow-studio-tabs">
+                  <span class="tab active">1</span>
+                  <span class="tab">2</span>
+                  <span class="tab">3</span>
+               </div>
+               <form class="flow-studio-form" action="#">
+                  <div role="tab-list">
+                     <div role="tabpanel" id="color" class="tabpanel">
+                        <div class="flow-tab-section">
+                            <fast-button href="#">Button</fast-button>
+                            <div class="flow-element">
+                                <fast-text-field placeholder="First Name"></fast-text-field>
+                            </div>
+                            <div class="flow-element">
+                                <fast-text-field placeholder="Last Name"></fast-text-field>
+                            </div>
+                            <div>
+                                <fast-radio-group><label style="color: var(--neutral-foreground-rest);" slot="label">How do you represent yourself?</label>
+                                    <fast-radio>He/Him</fast-radio>
+                                    <fast-radio>She/Her</fast-radio>
+                                    <fast-radio>They/Them</fast-radio>
+                                    <fast-radio>Prefer Not to Answer</fast-radio>
+                                </fast-radio-group>
+                            </div>
+                        </div>
+                     </div>
+                     <div role="tabpanel" id="hobbies" class="tabpanel hidden">
+                        <h3>What are your hobbies?</h3>
+                        <textarea name="hobbies" class="form-input" placeholder="Mountain climbing, Guitar, Skateboarding"></textarea>
+                     </div>
+                     <div role="tabpanel" id="occupation" class="tabpanel hidden">
+                        <h3>What is your occupation?</h3>
+                        <textarea name="occupation" class="form-input" placeholder="Web Designer"></textarea>
+                     </div>
+                  </div>
+                  <div class="pagination">
+                     <a class="btn hidden" id="prev">Previous</a>
+                     <a class="btn" id="next">Next Screen</a>
+                     <button class="btn btn-submit hidden" id="submit">Submit</button>
+                  </div>
+               </form>
+            </div>
+         </section>
+      </div>
+      <script type="text/javascript" src="index.js"></script>
+   </body>
+</html>
